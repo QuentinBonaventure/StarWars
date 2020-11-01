@@ -5,11 +5,14 @@ public class Main {
         Vaisseau vaisseauBase = new Vaisseau();
 
         vaisseauBase.setName();
-        System.in.read();
+
         vaisseauBase.setNbMissile();
-        System.in.read();
+
         vaisseauBase.ShowVaisseau();
-        System.in.read();
+        vaisseauBase.tirer();
+        vaisseauBase.voler();
+        vaisseauBase.atterir();
+
 
 
         }
