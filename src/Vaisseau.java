@@ -1,14 +1,18 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Vaisseau {
 
   public  String name;
+  public int reservoirMissile;
    public int nbMissile;
    private boolean enVol = false;
 
 
-   //----------------------------------------------------------
-    //Constrcuteur
+   /*
+    ----------------------------------------------------------
+    Constrcuteur
+    */
 
     public Vaisseau(){
         super();
@@ -16,8 +20,10 @@ public class Vaisseau {
         this.setNbMissile();
     }
 
-//----------------------------------------------------------------------------------------------
-   //Get et SET
+/*
+   ----------------------------------------------------------------------------------------------
+   Get et SET
+   */
 
     public String getName() {
         return this.name;
@@ -44,14 +50,22 @@ public class Vaisseau {
     }
 // Demande combien de missile il veut mettre en sachant que si
     // le nombre de missile est plus petit que 3 on demande de recharger
-    public void setNbMissile() {
+    public void setNbMissile() throws IOException {
         Scanner scan = new Scanner(System.in);
         System.out.println("Combien veux tu mettre de missile dans ton vaisseau ");
         this.nbMissile = scan.nextInt();
+
+        if(nbMissile >10){
+            System.out.println("Votre vaisseau ne peut pas supporter autant de missiles");
+            System.in.read();
+            System.out.println("Veuillez rentrer un nombre plus petit ");
+        }
     }
 
-    // --------------------------------
-    // Methodes crées manuellement
+    /*
+     --------------------------------
+     Methodes crées manuellement
+    */
 
     public void ShowVaisseau(){
         System.out.println("\nVoici ton vaisseau");
