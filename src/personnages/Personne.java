@@ -1,7 +1,8 @@
 package personnages;
 
 public abstract class Personne {
-    private final String name;
+    public static String name;
+
 
     public Personne(String name) {
         this.name = name;
@@ -11,5 +12,5 @@ public abstract class Personne {
         return name;
     }
     public abstract void afficheCamps();
-    public abstract void combattre();
+
 }
