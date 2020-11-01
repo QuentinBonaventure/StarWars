@@ -5,8 +5,9 @@ public class Main {
         vaisseauBase.setName();
         vaisseauBase.setNbMissile();
         vaisseauBase.ShowVaisseau();
-        for (int i =0 ; i < 6;i++){
+        for (int i =0 ; i < 3;i++){
             vaisseauBase.tirer();
+
         }
 
     }
