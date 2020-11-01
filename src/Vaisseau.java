@@ -52,6 +52,7 @@ public class Vaisseau {
 // Demande combien de missile il veut mettre en sachant que si
     // le nombre de missile est plus petit que 3 on demande de recharger
     public void setNbMissile() throws IOException {
+        //reglage du probleme avec creation de variable choix missile
         nbMissileMax=10;
         int choixNbMissile;
         Scanner scan = new Scanner(System.in);
