@@ -1,9 +1,13 @@
+import Scenario.Scenario1;
+import Scenario.Scenario2;
+import Scenario.ScenarioBase;
+
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ScenarioBase [] menu = new ScenarioBase[]{
+        ScenarioBase[] menu = new ScenarioBase[]{
                 new Scenario1(),
                 new Scenario2()
         };
