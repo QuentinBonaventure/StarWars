@@ -12,5 +12,5 @@ public abstract class Personne {
         return name;
     }
     public abstract void afficheCamps();
-
+public abstract void combattre();
 }
