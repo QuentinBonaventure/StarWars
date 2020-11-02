@@ -1,3 +1,5 @@
+package Vaisseau;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -129,10 +131,10 @@ public class Vaisseau {
             this.enVol = true;
             System.out.println("Je decolle");
             Vaisseau.nbEnVol++;
-            System.out.println("il y a \t" + getNbEnVol() +"\t Vaisseau en vol ");
+            System.out.println("il y a \t" + getNbEnVol() +"\t Vaisseau.Vaisseau en vol ");
             Vaisseau.nbAuSol--;
         }else{
-            System.out.println("Vaisseau déjà en vol");
+            System.out.println("Vaisseau.Vaisseau déjà en vol");
         }
     }
     //faire atterir vaisseau
@@ -144,7 +146,7 @@ public class Vaisseau {
             Vaisseau.nbAuSol++;
             System.out.println(getNbAuSol());
         }else{
-            System.out.println("Vaisseau déjà au sol");
+            System.out.println("Vaisseau.Vaisseau déjà au sol");
         }
     }
 
