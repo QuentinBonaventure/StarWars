@@ -124,7 +124,7 @@ public class Vaisseau {
 
     // Faire décoller le vaisseau si il est au sol
 
-    public void voler(){
+    public void Voler(){
         if (! this.enVol){
             this.enVol = true;
             System.out.println("Je decolle");
@@ -136,7 +136,7 @@ public class Vaisseau {
         }
     }
     //faire atterir vaisseau
-    public void atterir(){
+    public void Atterir(){
         if ( this.enVol){
             this.enVol = false;
             System.out.println("J'atteris");

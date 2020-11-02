@@ -1,28 +1,36 @@
-import personnages.Citoyen;
-import personnages.Personne;
-
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Vaisseau vaisseauBase = new Vaisseau();
-        Personne.name ="xWing";
-        Citoyen citoyen = new Citoyen(Personne.name);
+        ScenarioBase [] menu = new ScenarioBase[]{
+                new Scenario1()
+        };
+        Scanner scanner = new Scanner(System.in);
+        String input = null;
 
-        vaisseauBase.setName();
-
-        vaisseauBase.setNbMissile();
-
-        vaisseauBase.ShowVaisseau();
-        vaisseauBase.tirer();
-        vaisseauBase.voler();
-        vaisseauBase.atterir();
-
-        citoyen.afficheCamps();
-
+        displayMenu(menu);
+        input= scanner.nextLine();
+        int choice = Integer.parseUnsignedInt(input)-1;
+        if( choice< menu.length){
+            menu[choice].run();
+        }else{
+            System.out.println(" l'action n'est pas au menu ");
+        }
+        displayMenu(menu);
+        input = scanner.nextLine();
 
 
         }
 
+    private static void displayMenu(ScenarioBase[] menu) {
+        System.out.println();
+        for (int i = 0; i < menu.length;i++){
+            System.out.printf("-%d : %s%n" , i + 1 , menu[i].getName());
+        }
+        System.out.printf("- %s : %s%n", "q/Q","Quitter");
+        System.out.printf("Choix :  ");
     }
+
+}
 

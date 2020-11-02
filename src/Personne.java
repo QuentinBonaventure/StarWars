@@ -1,5 +1,3 @@
-package personnages;
-
 public abstract class Personne {
     public static String name;
 
