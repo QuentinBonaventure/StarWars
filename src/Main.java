@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         ScenarioBase [] menu = new ScenarioBase[]{
-                new Scenario1()
+                new Scenario1(),
+                new Scenario2()
         };
         Scanner scanner = new Scanner(System.in);
         String input = null;
